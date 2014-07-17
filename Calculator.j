@@ -8,7 +8,7 @@
        return
     .end method
 	
-	.method public static mymul(II)I
+	.method public static myMul(II)I
 		.limit stack 4
 		.limit locals 4
 		
@@ -18,7 +18,7 @@
 		ireturn
 	.end method
 		
-	.method public myadd(II)I
+	.method public myAdd(II)I
 		.limit stack 4
 		.limit locals 4
 		

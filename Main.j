@@ -19,7 +19,7 @@
 		ldc 5
 		ldc 6
 
-		invokevirtual Calculator/myadd(II)I
+		invokevirtual Calculator/myAdd(II)I
 		istore 1
 
 		getstatic java/lang/System/out Ljava/io/PrintStream;
@@ -29,7 +29,7 @@
 		ldc 5
 		ldc 5
 
-		invokestatic Calculator/mymul(II)I
+		invokestatic Calculator/myMul(II)I
 		istore 1
 
 		getstatic java/lang/System/out Ljava/io/PrintStream;

@@ -8,16 +8,25 @@
        return
     .end method
 	
-	.method public mymul(II)I
+	.method public static mymul(II)I
+		.limit stack 4
+		.limit locals 4
+		
+		iload 0
+		iload 1
+		imul
+		ireturn
+	.end method
+		
+	.method public myadd(II)I
 		.limit stack 4
 		.limit locals 4
 		
 		iload 1
 		iload 2
-		imul
+		iadd
 		ireturn
 	.end method
-		
 	
 	.method public static main([Ljava/lang/String;)V
 		.limit stack 10
@@ -30,15 +39,23 @@
 		ldc 5
 		ldc 6
 		
-		invokevirtual Main/mymul(II)I
+		invokevirtual Main/myadd(II)I
 		istore 1
 		
 		getstatic java/lang/System/out Ljava/io/PrintStream;
 		iload 1
 		invokevirtual java/io/PrintStream/println(I)V
 		
-		return
+		ldc 5
+		ldc 5
 		
+		invokestatic Main/mymul(II)I
+		istore 1
+
+		getstatic java/lang/System/out Ljava/io/PrintStream;
+		iload 1
+		invokevirtual java/io/PrintStream/println(I)V
+
+		return
+
 	.end method
-	
-	
